@@ -23,6 +23,7 @@ form {
   display: flex;
   flex-direction: column;
   width: 30%;
+  margin: 10px;
 }
 
 input {
@@ -48,16 +49,22 @@ button {
 .dog_box {
   background-color: #FFF;
   border: 3px grey solid;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center; 
+  height: 300px;
+  width: 300px;
 }
 
 .dog_header {
   display: flex;
   justify-content: space-between;
+  height: 10%;
 }
 
-.dog_image {
+.header_img {
   height: 30px;
+}
+
+.dog_img {
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
 }
