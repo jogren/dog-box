@@ -1,8 +1,5 @@
-var inputTitle = document.getElementById('form_input-name');
-var inputDescription = document.getElementById('form_input-description');
 var formButton = document.getElementById('form_button');
 var outputField = document.getElementById('main_section');
-var inputImage = document.getElementById('form_input-image');
 
 formButton.addEventListener('click', displayDogCard)
 outputField.addEventListener('click', deleteCard)
@@ -13,6 +10,7 @@ function displayDogCard(event) {
       return res.json()
     })
     .then(function(data) {
+      console.log(data)
       outputField.insertAdjacentHTML('afterbegin',
         `<section class="dog_box">
           <header class="dog_header">
