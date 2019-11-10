@@ -5,19 +5,20 @@ formButton.addEventListener('click', displayDogCard)
 outputField.addEventListener('click', deleteCard)
 
 function displayDogCard(event) {
-  fetch('https://dog.ceo/api/breeds/image/random')
-    .then(function(res) {
-      return res.json()
+  event.preventDefault();
+  fetch()
+    .then(function(response) {
+      return response.json()
     })
-    .then(function(data) {
-      console.log(data)
+    .then(function(dogPicture) {
+      console.log(dogPicture)
       outputField.insertAdjacentHTML('afterbegin',
         `<section class="dog_box">
           <header class="dog_header">
             <img class="header_img" src="./images/star.png" />
             <img class="header_img delete-card" src="./images/delete.png" />
           </header>
-          <img src=${data} class="dog_img"/>
+          <img src=${dogPicture} alt="Random picture of a dog" class="dog_img"/>
         </section>`);
     })
 }
