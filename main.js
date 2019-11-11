@@ -6,7 +6,7 @@ outputField.addEventListener('click', deleteCard)
 
 function displayDogCard(event) {
   event.preventDefault();
-  fetch()
+  fetch('https://dog.ceo/api/breeds/image/random')
     .then(function(response) {
       return response.json()
     })
@@ -18,7 +18,7 @@ function displayDogCard(event) {
             <img class="header_img" src="./images/star.png" />
             <img class="header_img delete-card" src="./images/delete.png" />
           </header>
-          <img src=${dogPicture} alt="Random picture of a dog" class="dog_img"/>
+          <img src=${dogPicture.message} alt="Random picture of a dog" class="dog_img"/>
         </section>`);
     })
 }
